@@ -4,12 +4,12 @@ export const MenuData =  [
         path: "/",
     },
     {
-        title: "About",
-        path: "/about",
-    },
-    {
         title: "Add Post",
         path: "/post/add",
+    },
+    {
+        title: "About",
+        path: "/about",
     },
     {
         title: "Contact",

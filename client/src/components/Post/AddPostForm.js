@@ -1,3 +1,5 @@
+import "./AddPostForm.css";
+
 import { useState } from "react";
 
 // TO DO: CHECK INPUT
@@ -29,47 +31,45 @@ function AddPostForm() {
   };
 
   return (
-    <div className="add-post-form-wrapper">
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="title">Title:</label>
-          <input
-            type="text"
-            id="title"
-            value={title}
-            onChange={(event) => setTitle(event.target.value)}
-          />
-        </div>
-        <div>
-          <label htmlFor="description">Description:</label>
-          <textarea
-            id="description"
-            value={description}
-            onChange={(event) => setDescription(event.target.value)}
-          />
-        </div>
-        <div>
-          <label htmlFor="category">Category:</label>
-          <input
-            type="text"
-            id="category"
-            value={category}
-            onChange={(event) => setCategory(event.target.value)}
-          />
-        </div>
-        <div>
-          <label htmlFor="user">User:</label>
-          <input
-            type="text"
-            id="user"
-            value={user}
-            onChange={(event) => setUser(event.target.value)}
-          />
-        </div>
-        
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+    <form className="add-post-form" onSubmit={handleSubmit}>
+      <div>
+        <label htmlFor="title">Title:</label>
+        <input
+          type="text"
+          id="title"
+          value={title}
+          onChange={(event) => setTitle(event.target.value)}
+        />
+      </div>
+      <div>
+        <label htmlFor="description">Description:</label>
+        <textarea
+          id="description"
+          value={description}
+          onChange={(event) => setDescription(event.target.value)}
+        />
+      </div>
+      <div>
+        <label htmlFor="category">Category:</label>
+        <input
+          type="text"
+          id="category"
+          value={category}
+          onChange={(event) => setCategory(event.target.value)}
+        />
+      </div>
+      <div>
+        <label htmlFor="user">User:</label>
+        <input
+          type="text"
+          id="user"
+          value={user}
+          onChange={(event) => setUser(event.target.value)}
+        />
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
   );
 }
 

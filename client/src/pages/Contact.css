@@ -1,3 +1,6 @@
 .contact-wrapper {
     min-height: calc(100vh - 108px);
+    background: #3423A6;
+
+    color: #FAFAFA;
 }
