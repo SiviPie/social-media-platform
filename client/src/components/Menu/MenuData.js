@@ -8,6 +8,10 @@ export const MenuData =  [
         path: "/about",
     },
     {
+        title: "Add Post",
+        path: "/post/add",
+    },
+    {
         title: "Contact",
         path: "/contact",
     },
