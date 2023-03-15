@@ -1,11 +1,13 @@
-function Home() {
+import PostFeed from "../components/Post/PostFeed";
 
-    return (
-      <div className="home-wrapper">
-          home
-      </div>
-    );
-  }
+function Home() {
   
-  export default Home;
-  
+
+  return (
+    <div className="home-wrapper">
+      <PostFeed />
+    </div>
+  );
+}
+
+export default Home;
