@@ -1,7 +1,9 @@
+import './PostCard.css'
+
 function PostCard(props) {
     const post = props.post;
     return (
-      <div className="postcard">
+      <div className="postcard-wrapper">
         <h3>{post.title}</h3>
         <p>Category: {post.category}</p>
         <p>Description: {post.description}</p>

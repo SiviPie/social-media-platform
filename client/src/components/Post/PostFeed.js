@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import PostCard from "./PostCard";
+import './PostFeed.css'
 
 function PostFeed() {
   const [posts, setPosts] = useState([]);
@@ -12,12 +13,11 @@ function PostFeed() {
   }, []);
   return (
     <div className="postfeed-wrapper">
-
       <h2>Posts:</h2>
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
-            <PostCard post={post}/>
+            <PostCard post={post} />
           </li>
         ))}
       </ul>
