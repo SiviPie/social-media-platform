@@ -1,8 +1,8 @@
 import PostFeed from "../components/Post/PostFeed";
 
-function Home() {
-  
+import './Home.css'
 
+function Home() {
   return (
     <div className="home-wrapper">
       <PostFeed />

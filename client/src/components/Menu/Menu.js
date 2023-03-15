@@ -9,12 +9,12 @@ function Menu() {
     <div className="nav-wrapper">
       {MenuData.map((item, index) => {
         return (
-          <li key={index} className="nav-text">
-            <Link to={item.path}>
+          <Link to={item.path}>
+            <li key={index} className="nav-text">
               {item.icon}
               <span className="menu-title">{item.title}</span>
-            </Link>
-          </li>
+            </li>
+          </Link>
         );
       })}
     </div>

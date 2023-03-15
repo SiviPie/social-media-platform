@@ -1,3 +1,23 @@
 .nav-wrapper {
-    background: #FAFAFA;
+    position: sticky;
+    top: 0;
+    background: #171738;
+    color: white;
+    display: flex;
 }
+
+.nav-wrapper li {
+    list-style-type: none;
+    padding: 20px 20px 20px 20px;
+}
+
+.nav-wrapper li:hover {
+    background: #2E1760;
+    cursor: pointer;
+}
+
+.nav-wrapper a {
+    text-decoration: none;
+    color: white;
+}
+

@@ -1,11 +1,10 @@
 .footer-wrapper {
-    position: fixed;
     bottom: 0;
 
-    height: 50px;
+    padding: 10px 0px 10px 0px;
     width: 100%;
 
-    background: rgb(149, 52, 224);
-    
-    
+    background: #171738;
+    color: white;
+    text-align: center;
 }

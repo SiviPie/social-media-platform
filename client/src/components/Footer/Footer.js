@@ -3,7 +3,7 @@ import './Footer.css'
 function Footer() {
     return (
       <div className="footer-wrapper">
-          footer
+          Copyright © 2023 Silivestru Silvia-Georgiana
       </div>
     );
   }
