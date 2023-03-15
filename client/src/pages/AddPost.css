@@ -1,3 +1,9 @@
 .add-post-wrapper {
     min-height: calc(100vh - 108px);
+    background: #3423A6;
+    display: flex;
+}
+
+.add-post-wrapper form {
+    margin: auto;
 }

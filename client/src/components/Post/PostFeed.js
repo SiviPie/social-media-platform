@@ -13,7 +13,6 @@ function PostFeed() {
   }, []);
   return (
     <div className="postfeed-wrapper">
-      <h2>Posts:</h2>
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
