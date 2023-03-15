@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer/Footer";
+import AddPost from "./pages/AddPost";
 
 const AppLayout = () => (
   <>
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/post/add",
+        element: <AddPost />,
       },
       {
         path: "about",
