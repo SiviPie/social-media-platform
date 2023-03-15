@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { MenuData } from "./MenuData";
 
@@ -9,7 +9,7 @@ function Menu() {
     <div className="nav-wrapper">
       {MenuData.map((item, index) => {
         return (
-          <li key={index} className="nav-text menu-text">
+          <li key={index} className="nav-text">
             <Link to={item.path}>
               {item.icon}
               <span className="menu-title">{item.title}</span>

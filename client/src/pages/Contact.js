@@ -1,7 +1,7 @@
 function Contact() {
 
     return (
-      <div className="home-wrapper">
+      <div className="contact-wrapper">
           contact
       </div>
     );

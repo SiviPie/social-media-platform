@@ -1,7 +1,8 @@
-function Footer() {
+import './Footer.css'
 
+function Footer() {
     return (
-      <div className="contact-wrapper">
+      <div className="footer-wrapper">
           footer
       </div>
     );
