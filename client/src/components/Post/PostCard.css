@@ -6,3 +6,31 @@
     padding: 20px;
     border-radius: 4px;
 }
+
+.postcard-header {
+    display: flex;
+    align-items:first baseline;
+    gap: 10px;
+    border-bottom: 1px solid #FAFAFA;
+}
+
+.post-category {
+    font-size: 20px;
+}
+
+.postcard-title {
+    font-size: 20px;
+    padding: 10px 0px 10px 0px;
+}
+
+.postcard-description {
+    margin-bottom: 20px;
+}
+
+.postcard-votes {
+    display: flex;
+    gap: 20px;
+
+    padding-top: 10px;
+    border-top: 1px solid #FAFAFA;
+}

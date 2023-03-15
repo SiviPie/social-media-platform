@@ -1,3 +1,5 @@
+import './AddPost.css'
+
 import AddPostForm from "../components/Post/AddPostForm";
 
 function AddPost() {
