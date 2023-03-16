@@ -1,5 +1,5 @@
 const express = require("express");
-const {postPost, getPosts, getFavorites, patchPost, getCategoryPosts} = require("../controllers/post");
+const {postPost, getPosts, getFavorites, patchPost, getCategoryPosts, deletePost} = require("../controllers/post");
 const router = express.Router();
 
 
@@ -10,5 +10,6 @@ router.get("/posts", getPosts)
 router.patch("/post", patchPost)
 router.get("/favorites", getFavorites)
 router.get("/r/:categ", getCategoryPosts)
+router.delete("/post", deletePost)
 
 module.exports = router
