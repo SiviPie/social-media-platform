@@ -1,0 +1,29 @@
+.usercard-wrapper {
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+    justify-content: first baseline;
+    background: #171738;
+    width: 400px;
+    color: #FAFAFA;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.usercard-header {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.usercard-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.usercard-wrapper img {
+    border-radius: 50%;
+    height: 150px;
+    object-fit: cover;
+}

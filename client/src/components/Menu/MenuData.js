@@ -2,7 +2,7 @@ export const MenuData =  [
     {
         title: "Home",
         path: "/",
-        id: 0,
+        id: 0
     },
     {
         title: "Add Post",
@@ -10,13 +10,18 @@ export const MenuData =  [
         id: 1,
     },
     {
+        title: "Users",
+        path: "/users",
+        id: 2,
+    },
+    {
         title: "About",
         path: "/about",
-        id: 2,
+        id: 3,
     },
     {
         title: "Contact",
         path: "/contact",
-        id: 3
+        id: 4,
     },
 ]

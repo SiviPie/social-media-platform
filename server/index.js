@@ -10,8 +10,10 @@ app.use(cors({
 const PORT = 3001;
 const categoryRoute = require('./routes/category.js')
 const postRoute = require('./routes/post.js')
+const userRoute = require('./routes/user')
 app.use(categoryRoute);
 app.use(postRoute);
+app.use(userRoute);
 app.listen(PORT, (error) =>{
     if(!error)
         console.log("Server is Successfully Running, and App is listening on port "+ PORT)
