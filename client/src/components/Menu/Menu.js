@@ -9,8 +9,8 @@ function Menu() {
     <div className="nav-wrapper">
       {MenuData.map((item, index) => {
         return (
-          <Link to={item.path}>
-            <li key={index} className="nav-text">
+          <Link to={item.path} key={item.id}>
+            <li className="nav-text">
               {item.icon}
               <span className="menu-title">{item.title}</span>
             </li>
