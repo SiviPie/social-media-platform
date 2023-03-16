@@ -11,6 +11,17 @@ const postPost = async (req, res) => {
   }
 };
 
+const getPost = async (req, res) => {
+  if ("_id" in req.body) {
+    try {
+      const post = await postModel.findOne({_id: req.body._id});
+      res.send(post);
+    } catch (error) {
+      res.send("Could not find post");
+    }
+  } else res.send({ err: "please fill out _id field" });
+};
+
 const getPosts = async (req, res) => {
   const posts = await postModel.find();
   res.send(posts);
@@ -90,6 +101,7 @@ const deletePost = async (reg, res) => {
 
 module.exports = {
   postPost,
+  getPost,
   getPosts,
   patchPost,
   getFavorites,
