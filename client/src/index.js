@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer/Footer";
 import AddPost from "./pages/AddPost";
+import PostPage from "./pages/PostPage"
 
 const AppLayout = () => (
   <>
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path:"/post/:id",
+        element: <PostPage />
       },
       {
         path: "/post/add",

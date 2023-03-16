@@ -41,7 +41,6 @@ function PostCard(props) {
 
   const handleDelete = () => {
     const postdiv = document.getElementById(`${props.post._id}`);
-    console.log(postdiv);
     postdiv.style.display = 'none';
 
     fetch(`http://localhost:3001/post`, {
