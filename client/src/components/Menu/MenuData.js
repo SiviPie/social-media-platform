@@ -2,7 +2,7 @@ export const MenuData =  [
     {
         title: "Home",
         path: "/",
-        id: 0,
+        id: 0
     },
     {
         title: "Add Post",
