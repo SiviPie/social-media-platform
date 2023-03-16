@@ -17,12 +17,15 @@ const userSchema = mongoose.Schema({
   },
   firstName: {
     type: String,
+    required: true,
   },
   lastName: {
     type: String,
+    required: true,
   },
   avatar: {
     type: String,
+    default: "../../client/src/assets/img/user/default.png",
   },
   bio: {
     type: String,

@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer/Footer";
 import AddPost from "./pages/AddPost";
 import PostPage from "./pages/PostPage"
+import Users from "./pages/Users";
 
 const AppLayout = () => (
   <>
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/post/add",
         element: <AddPost />,
+      },
+      {
+        path: "/users",
+        element: <Users />,
       },
       {
         path: "about",

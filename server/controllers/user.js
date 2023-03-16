@@ -14,7 +14,7 @@ const postUser = async (req, res) => {
 const getUser = async (req, res) => {
   if ("_id" in req.body) {
     try {
-      const user = await userModel.findOne({_id: req.body._id});
+      const user = await userModel.findOne({ _id: req.body._id });
       res.send(user);
     } catch (error) {
       res.send("Could not find user");
@@ -27,39 +27,31 @@ const getUsers = async (req, res) => {
   res.send(users);
 };
 
-
 const patchUser = async (req, res) => {
   if ("_id" in req.body) {
     try {
-      const users = await postModel.find({ _id: req.body._id });
+      const users = await userModel.find({ _id: req.body._id });
       if (users.length != 0) {
         if ("action" in req.body) {
-          if (req.body.action == "changeUsername") {
-            await postModel.updateOne(
-              { _id: posts[0]._id },
-              {  username: req.body.username}
+          if (req.body.action == "change-username") {
+            await userModel.updateOne(
+              { _id: users[0]._id },
+              { username: req.body.username }
             );
-            console.log("upvoted " + posts[0].title);
+            console.log("Changed username " + users[0].username);
             res.send({ success: "true" });
-          } else if (reg.body.action == "downvote") {
-            await postModel.updateOne(
-              { _id: posts[0]._id },
-              { downvotes: posts[0].downvotes + 1 }
+          } else if (req.body.action == "change-avatar") {
+            await userModel.updateOne(
+              { _id: users[0]._id },
+              { avatar: req.body.avatar}
             );
-            console.log("downvoted " + posts[0].title);
-            res.send({ success: "true" });
-          } else if (reg.body.action == "toggleFavorite") {
-            await postModel.updateOne(
-              { _id: posts[0]._id },
-              { isFavorite: !posts[0].isFavorite }
-            );
-            console.log("favorite");
+            console.log("Changed avatar " + users[0].username);
             res.send({ success: "true" });
           } else res.send({ err: "action not recognised" });
         } else res.send({ err: "plese fill out action field" });
-      } else res.send({ err: "could not find post with specified id" });
+      } else res.send({ err: "could not find user with specified id" });
     } catch (error) {
-      res.send({ err: "could get posts" });
+      res.send({ err: "could not get users: " + error.message });
       return;
     }
   } else res.send({ err: "please fill out _id field" });
