@@ -39,8 +39,28 @@ function PostCard(props) {
       .catch((error) => console.error(error));
   };
 
+  const handleDelete = () => {
+    const postdiv = document.getElementById(`${props.post._id}`);
+    console.log(postdiv);
+    postdiv.style.display = 'none';
+
+    fetch(`http://localhost:3001/post`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        _id: props.post._id,
+        action: "delete",
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.error(error));
+  };
+
   return (
-    <div className="postcard-wrapper">
+    <div className="postcard-wrapper" id={props.post._id}>
       <div className="postcard-header">
         <p className="post-category">{props.post.category}</p>
         <p>by {props.post.user}</p>
@@ -57,6 +77,7 @@ function PostCard(props) {
         <button onClick={handleUpvote}>Upvote</button>
         <p>Downvotes: {downvotes}</p>
         <button onClick={handleDownvote}>Downvote</button>
+        <button onClick={handleDelete}>Delete</button>
       </div>
     </div>
   );
